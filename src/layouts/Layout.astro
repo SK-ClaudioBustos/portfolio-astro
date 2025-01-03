@@ -1,22 +1,75 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Footer from "./Footer.astro";
+import Navbar from "./Navbar.astro";
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta
+			name="description"
+			content="Portafolio web de Claudio Bustos desarrollador web Frontend"
+		/>
+		<ClientRouter />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Navbar />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	*,
+	*:after,
+	*::before {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	@font-face {
+		font-family: "Jost-SemiBold";
+		src: url("../fonts/Jost-SemiBold.ttf") format("truetype");
+		font-display: swap;
+	}
+
+	:root {
+		--c1: #1d1f21;
+		--c2: #f1f1f1;
+		--c3: #222428;
+		--c4: #facf11;
+	}
+
 	html,
 	body {
-		margin: 0;
 		width: 100%;
+		max-width: 1980px;
 		height: 100%;
+
+		margin: 0;
+		background-color: var(--c3);
+		
+		font-family: "Jost-SemiBold";
+		color: var(--c2);
 	}
+
+	main {
+		min-height: calc(100vh - 125px);
+	}
+
+	a {
+		text-decoration: none;
+	}
+
 </style>
