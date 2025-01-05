@@ -11,7 +11,7 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 		<meta
 			name="description"
 			content="Portafolio web de Claudio Bustos desarrollador web Frontend"
@@ -58,18 +58,21 @@ const { title } = Astro.props;
 		height: 100%;
 
 		margin: 0;
-		background-color: var(--c3);
-		
+		/* background-color: var(--c3); */
+		--bg-size: 20px;
+		background-size: var(--bg-size) var(--bg-size);
+		background-image: radial-gradient(var(--c1) 3px, var(--c3) 1px);
+
 		font-family: "Jost-SemiBold";
 		color: var(--c2);
 	}
 
 	main {
+		padding: 20px 25px;
 		min-height: calc(100vh - 125px);
 	}
 
 	a {
 		text-decoration: none;
 	}
-
 </style>
