@@ -54,11 +54,9 @@ const { title } = Astro.props;
 	html,
 	body {
 		width: 100%;
-		max-width: 1980px;
 		height: 100%;
 
 		margin: 0;
-		/* background-color: var(--c3); */
 		--bg-size: 20px;
 		background-size: var(--bg-size) var(--bg-size);
 		background-image: radial-gradient(var(--c1) 3px, var(--c3) 1px);
@@ -74,5 +72,17 @@ const { title } = Astro.props;
 
 	a {
 		text-decoration: none;
+	}
+
+	.flex-center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@media (width > 1980px) {
+		body, .navbar-content, footer {
+			margin: 0 auto;
+		}
 	}
 </style>
