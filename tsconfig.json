@@ -10,6 +10,9 @@
       ],
       "@type/*": [
         "./src/types/*"
+      ],
+      "@icons/*": [
+        "./src/icons/*"
       ]
     },
     "moduleResolution": "node",
