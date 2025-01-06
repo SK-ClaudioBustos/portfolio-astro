@@ -1,7 +1,36 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import SkillBox from "@components/SkillsBox/SkillsBox.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Claudio Bustos | Skills">
-	<h1>Skills Page</h1>
+	<section class="skills-section flex-center">
+		<div class="container">
+			<h1>My Stack</h1>
+			<SkillBox />
+		</div>
+	</section>
 </Layout>
+
+<style>
+	.skills-section {
+		height: 70vh;
+
+		& .container {
+			width: 100%;
+			text-align: center;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+
+			& h1 {
+				font-weight: bold;
+				font-size: 64px;
+				letter-spacing: 0.7rem;
+				margin-bottom: 20px;
+			}
+		}
+	}
+</style>
