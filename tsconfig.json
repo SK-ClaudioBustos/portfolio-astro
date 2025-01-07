@@ -13,6 +13,9 @@
       ],
       "@icons/*": [
         "./src/icons/*"
+      ],
+      "@data/*": [
+        "./src/data/*"
       ]
     },
     "moduleResolution": "node",
