@@ -1,0 +1,69 @@
+<script>
+    export const colors: Record<number, string> = {
+        0: "transparent",
+        1: "#282546",
+        2: "#7c7bd9",
+        3: "#e3741d",
+        4: "#fdf7ed",
+    };
+
+    export const pixelArt = [
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0,
+        0, 1, 1, 2, 4, 4, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 1, 1, 2, 4, 2, 2, 2,
+        2, 2, 2, 2, 2, 1, 1, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0,
+        0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 1, 1, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1,
+        1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+        1, 3, 3, 1, 3, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    ];
+
+    const FrameElement = document.getElementById("pixel_art");
+    const boxShadow = pixelArt
+        .map((pixel, index) => {
+            const num = 16;
+            const x = num * (index % num);
+            const y = num * ~~(index / num);
+            return `${x}px ${y}px ${colors[pixel]}`;
+        })
+        .join(",\n");
+
+    if (FrameElement) {
+        FrameElement.style.setProperty("--shadow", boxShadow);
+    }
+</script>
+
+<div class="frame-container">
+    <div id="pixel_art" class="frame">
+        <div class="pixel"></div>
+    </div>
+</div>
+
+<style>
+    .frame-container {
+        --frame-size: 256px;
+        width: var(--frame-size);
+        height: var(--frame-size);
+
+        & .frame {
+            width: var(--frame-size);
+            height: var(--frame-size);
+
+            & .pixel {
+                height: 17px;
+                width: 17px;
+                box-shadow: var(--shadow);
+                filter: drop-shadow(2px 2px 15px rgba(239, 236, 236, 0.55));
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .frame {
+            transform: scale(0.8);
+        }
+    }
+</style>
