@@ -14,7 +14,7 @@ import Layout from "@layouts/Layout.astro";
 
 <style>
 	.skills-section {
-		height: 70vh;
+		height: 100%;
 
 		& .container {
 			width: 100%;
@@ -27,7 +27,7 @@ import Layout from "@layouts/Layout.astro";
 
 			& h1 {
 				font-weight: bold;
-				font-size: 64px;
+				font-size: clamp(2.5rem, 8vw + 1rem, 5rem );
 				letter-spacing: 0.7rem;
 				margin-bottom: 20px;
 			}

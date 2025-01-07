@@ -1,4 +1,5 @@
 ---
+import PixelArt from "@components/PixelArt/PixelArt.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
@@ -9,14 +10,26 @@ import Layout from "@layouts/Layout.astro";
 			frontend developer, and in this space, you can learn more about me
 			and my work.
 		</h1>
+		<PixelArt client:load />
 	</section>
 </Layout>
 
 <style>
 	.welcome {
-		height: calc(100vh - 165px);
+		max-width: 1980px;
+		height: 100%;
+
 		display: flex;
-		justify-content: space-around;
+		flex-direction: column;
 		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 4rem;
+
+		padding: 0 25px;
+
+		& h1 {
+			font-size: clamp(2rem, 4.5vw + 1rem, 2.5rem);
+		}
 	}
 </style>
