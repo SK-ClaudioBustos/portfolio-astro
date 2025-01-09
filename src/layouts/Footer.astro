@@ -1,20 +1,53 @@
+---
+import Link from "@components/Navbar/Link.astro";
+import GithubIcon from "@icons/social-media/github.svg";
+import LinkedinIcon from "@icons/social-media/linkedin.svg";
+---
+
 <footer class="footer">
-    <span>
-        Check out the repository for this project <a aria-label="Go to portfolio repository" target="_blank" rel="noopener noreferrer" href="https://github.com/SK-ClaudioBustos/portfolio-astro">here</a>
-    </span>
+    <p>
+        Check out the repository for this project
+        <Link
+            classType="link"
+            ariaLabel="Go to the repository for this project"
+            target="_blank"
+            url="https://github.com/SK-ClaudioBustos/portfolio-astro"
+        >
+            here
+        </Link>
+    </p>
+    <div class="social-media-links">
+        <Link
+            classType="link"
+            target="_blank"
+            url="https://www.linkedin.com/in/claudio-paul-bustos-rodríguez-395a0631a/"
+            ariaLabel="Visit my LinkedIn profile"
+        >
+            <LinkedinIcon />
+        </Link>
+        <Link
+            classType="link"
+            target="_blank"
+            url="https://github.com/SK-ClaudioBustos"
+            ariaLabel="Visit my Github account"
+        >
+            <GithubIcon />
+        </Link>
+    </div>
 </footer>
 
 <style>
-    .footer {
+    .footer {-
         max-width: 1980px;
-        height: 45px;
+        min-height: 45px;
         padding: 10px 25px;
 
-        & span {
-            
-            & a, a:focus, a:visited {
-                color: var(--c4);
-            }
+        display: flex;
+        justify-content: space-between;
+
+        & .social-media-links {
+            display: flex;
+            gap: 1rem;
         }
     }
 </style>
