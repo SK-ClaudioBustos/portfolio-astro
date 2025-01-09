@@ -1,12 +1,46 @@
 ---
-const { url, label } = Astro.props;
+type ClassType = "navigation" | "link";
+
+interface Props {
+    url: string;
+    classType: ClassType;
+    ariaLabel: string;
+    isSelected?: boolean;
+    target?: astroHTML.JSX.HTMLAttributeAnchorTarget;
+}
+
+const {
+    url,
+    ariaLabel,
+    classType,
+    isSelected = false,
+    target = "_self",
+} = Astro.props;
 ---
 
-<a role="navigation" class="navegation-link" aria-label={`go to ${label} section`} href={url}>{label}</a>
+<a
+    role={classType}
+    target={target}
+    class={`${classType} ${isSelected ? "selected" : "no-selected"}`}
+    aria-label={ariaLabel}
+    href={url}
+    rel="noopener noreferrer"
+>
+    <slot />
+</a>
 
 <style>
-    .navegation-link{
+    .navigation.no-selected {
+        color: color-mix(in srgb, var(--c2), #000 45%);
+        font-size: inherit;
+    }
+
+    .navigation.selected {
         color: var(--c2);
-        font-size: 24px;
+    }
+
+    .link {
+        color: var(--c4);
+        font-size: inherit;
     }
 </style>
