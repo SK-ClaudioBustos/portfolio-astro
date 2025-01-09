@@ -1,0 +1,49 @@
+---
+import Link from "@components/Navbar/Link.astro";
+import { type LinkData } from "@type/types";
+
+const LINKS: LinkData[] = [
+    {
+        url: "/",
+        label: "Welcome",
+    },
+    {
+        url: "/skills",
+        label: "Skills",
+    },
+    {
+        url: "/experiencies",
+        label: "Experiences",
+    },
+    {
+        url: "/projects",
+        label: "Projects",
+    },
+    {
+        url: "/about-me",
+        label: "About Me",
+    },
+];
+---
+
+<div class="links">
+    {
+        LINKS.map(({ url, label }) => (
+            <Link
+                url={url}
+                classType="navigation"
+                ariaLabel={`${label} section`}
+                isSelected={Astro.url.pathname === url}
+            >
+                {label}
+            </Link>
+        ))
+    }
+</div>
+
+<style>
+    .links {
+        display: flex;
+        gap: 1.5rem;
+    }
+</style>
