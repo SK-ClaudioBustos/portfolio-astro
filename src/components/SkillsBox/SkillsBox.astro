@@ -8,7 +8,7 @@ import Skill from "./Skill.astro";
     {
         SKILLS.map(({ Icon, label }) => (
             <Skill label={label}>
-                <Icon width={70} height={70} />
+                <Icon width={50} height={50} />
             </Skill>
         ))
     }
@@ -17,10 +17,9 @@ import Skill from "./Skill.astro";
 <style>
     .skills-box {
         width: 85%;
-
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem 2.5rem;
+        gap: 3rem;
         justify-content: center;
     }
 </style>
