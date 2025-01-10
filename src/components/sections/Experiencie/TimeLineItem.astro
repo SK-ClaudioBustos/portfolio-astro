@@ -1,0 +1,76 @@
+---
+import { ExperienceData } from "@type/types";
+
+const { date, title, description, technologies } = Astro.props as ExperienceData;
+---
+
+<li class="timeline-item">
+    <div class="timeline-marker"></div>
+    <time class="timeline-date">{date}</time>
+    <h3 class="timeline-title">{title}</h3>
+    <p class="timeline-text">{description}</p>
+    <div class="technologies">
+        {
+            technologies.map(tech => 
+                <div class="tech-item" style={{"--bgc": tech.color}}>
+                    <span>{tech.label}</span>
+                </div>
+            )
+        }
+    </div>
+</li>
+
+<style>
+    .timeline-item {
+        margin-bottom: 60px;
+        position: relative;
+        padding-left: 16px;
+
+        & .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            & .tech-item {
+                background-color: var(--bgc);
+                color: var(--c2);
+                font-size: 0.8rem;
+                border: .5px solid var(--c2);
+                border-radius: 50px;
+                padding: 5px 10px;
+            }
+        }
+
+        & .timeline-marker {
+            position: absolute;
+            top: 0.375rem;
+            left: -1.56rem;
+            --size: 16px;
+            width: var(--size);
+            height: var(--size);
+            background-color: var(--c2);
+            border: 2px solid var(--c3);
+            border-radius: 50%;
+        }
+
+        & .timeline-date {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        & .timeline-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--c2);
+            margin-bottom: 8px;
+        }
+
+        & .timeline-text {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+    }
+</style>

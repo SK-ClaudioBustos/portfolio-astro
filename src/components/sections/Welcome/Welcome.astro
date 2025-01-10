@@ -1,0 +1,23 @@
+---
+import SectionWrapper from "@components/ui/SectionWrapper.astro";
+---
+
+<SectionWrapper id="welcome">
+	<div class="welcome">
+		<h1>
+			Hello! Welcome to my website. My name is Claudio Bustos, I’m a
+			frontend developer, and in this space, you can learn more about me
+			and my work.
+		</h1>
+	</div>
+</SectionWrapper>
+
+<style>
+	.welcome {
+		text-align: center;
+
+		h1 {
+			font-size: clamp(1rem, 4vw + 1rem, 2rem);
+		}
+	}
+</style>

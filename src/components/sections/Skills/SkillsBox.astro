@@ -1,15 +1,15 @@
 ---
 import { SKILLS } from "@data/skills";
 import { Props } from "astro";
-import Skill from "./Skill.astro";
+import SkillItem from "./SkillItem.astro";
 ---
 
 <div class="skills-box">
     {
         SKILLS.map(({ Icon, label }) => (
-            <Skill label={label}>
+            <SkillItem label={label}>
                 <Icon width={50} height={50} />
-            </Skill>
+            </SkillItem>
         ))
     }
 </div>

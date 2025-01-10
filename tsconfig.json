@@ -16,6 +16,9 @@
       ],
       "@data/*": [
         "./src/data/*"
+      ],
+      "@sections/*": [
+        "./src/components/sections/*"
       ]
     },
     "moduleResolution": "node",

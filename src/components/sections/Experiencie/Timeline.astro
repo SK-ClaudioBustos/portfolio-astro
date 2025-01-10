@@ -1,0 +1,17 @@
+---
+import { EXPERIENCIES } from "@data/experiences";
+import TimeLineItem from "./TimeLineItem.astro";
+---
+
+<ol class="timeline">
+  {EXPERIENCIES.map((experiencie) => <TimeLineItem {...experiencie} />)}
+</ol>
+
+<style>
+  .timeline {
+    position: relative;
+    border-left: 2px solid #e5e7eb;
+    padding-left: 16px;
+    list-style: none;
+  }
+</style>
