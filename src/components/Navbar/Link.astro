@@ -21,7 +21,7 @@ const {
 <a
     role={classType}
     target={target}
-    class={`${classType} ${isSelected ? "selected" : "no-selected"}`}
+    class:list={[classType,{"selected": isSelected}]}
     aria-label={ariaLabel}
     href={url}
     rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const {
 </a>
 
 <style>
-    .navigation.no-selected {
+    .navigation {
         color: color-mix(in srgb, var(--c2), #000 45%);
         font-size: inherit;
     }
