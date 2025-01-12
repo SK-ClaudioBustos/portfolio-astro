@@ -6,6 +6,7 @@ import JavascriptIcon from "@icons/skills/javascript.svg";
 import LaravelIcon from "@icons/skills/laravel.svg";
 import PhpIcon from "@icons/skills/php.svg";
 import ReactIcon from "@icons/skills/react.svg";
+import ReactRouterIcon from "@icons/skills/reactrouter.svg";
 import TypescriptIcon from "@icons/skills/typescript.svg";
 import { SkillData } from "@type/types";
 
@@ -33,6 +34,10 @@ export const SKILLS: SkillData[] = [
     {
         label: "React",
         Icon: ReactIcon,
+    },
+    {
+        label: "React Router",
+        Icon: ReactRouterIcon,
     },
     {
         label: "Astro",
