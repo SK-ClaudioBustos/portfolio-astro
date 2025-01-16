@@ -1,0 +1,37 @@
+{
+    "NAV_LINKS": {
+        "L1": "Conocimientos",
+        "L2": "Experiencia",
+        "L3": "Proyectos",
+        "L4": "Sobre mí"
+    },
+    "PAGE_TITLE": "Claudio Bustos | Desarrollador Web",
+    "WELCOME_INTRODUCTION": "Hola! Bienvenidos a mi sitio web. Mi nombre es Claudio Bustos, yo soy un desarrollador web, y en este espacio, podras aprender mas sobre mí y mi trabajo.",
+    "SKILLS_TITLE": "Mis conocimientos",
+    "EXPERIENCIES": {
+        "EXP_1": {
+            "DATE": "Noviembre 2024 - Actualmente",
+            "TITLE": "Desarrollador Freelancer Fullstack en You Send We Print",
+            "DESCRIPTION": "Como desarrollador freelancer, yo diseño y desarrollo nuevas secciones y controladores ajustados a las necesidades especificas de mis clientes. Yo trabajo sobre un sistema hecho en PHP el cuál utiliza un framework personalizado y posee una arquitectura MVC, permitiendome entregar soluciones eficientes y escalables de acuerdo a los objetivos del proyecto."
+        },
+        "EXP_2": {
+            "DATE": "Marzo 2023 - October 2024",
+            "TITLE": "Desarrollador Freelancer Fullstack en Biblioteca Gloria Montoya",
+            "DESCRIPTION": "Uno de mis últimos trabajos fue sobre el desarrollo de un sitio web que permite visualizar los trabajos artisticos y libros de un museo, tambien se puede consultar información sobre los artistas y autores, esté sitio web va evolucionando constantemente."
+        },
+        "EXP_3": {
+            "DATE": "Abril 2023 - October 2024",
+            "TITLE": "Desarrollador Fullstack in Public Prosecutor's Office",
+            "DESCRIPTION": "En está pasantía me encarge del desarrollo de nuevas funcionalidades, definicion de interfaces y componentes genéricos funcionales, con Mui Component Library + JsonForms + React js, que luego se incorporaban dentro del sistema principal el cuál se comunica con diferentes microservicios, principalmente utiliza Graphql con un servidor Nest Js en el cual configuramos adicionalmente un servicio de login con Keycloak y un servicio para almacenar archivos con MinioJS. Tambien ayude a desarrollar una aplicación que servirá para agilizar la toma de denuncias de cada persona que se presente en cada comisaría de Entre Ríos"
+		},
+        "EXP_4": {
+            "DATE": "Marzo 2023 - Actualmente",
+            "TITLE": "Fullstack Developer on Kinefitness",
+            "DESCRIPTION": "Me encuentro realizando el desarrollo de un sistema web multiusuario de arquitectura cliente/servidor utilizando Laravel, este mismo es el proyecto final que me queda presentar para poder recibirme de mi carrera"
+		}
+    },
+    "FOOTER_REPOSITORY_LINK": {
+        "TEXT": "Mira el repositorio del proyecto",
+        "LINK_TEXT": "aquí"
+    }
+}

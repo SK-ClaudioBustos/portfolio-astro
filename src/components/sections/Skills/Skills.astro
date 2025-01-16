@@ -1,11 +1,13 @@
 ---
 import SectionWrapper from "@components/ui/SectionWrapper.astro";
 import SkillsBox from "./SkillsBox.astro";
+
+const { i18n } = Astro.props;
 ---
 
 <SectionWrapper id="skills">
 	<div class="skills-container">
-		<h1>My Stack</h1>
+		<h1>{i18n.SKILLS_TITLE}</h1>
 		<SkillsBox />
 	</div>
 </SectionWrapper>

@@ -1,6 +1,9 @@
 ---
 import Link from "@components/ui/Link.astro";
-import { LINKS } from "@data/links";
+import { getLinks } from "@data/links";
+
+const { currentLocale = "es" } = Astro;
+const LINKS = getLinks(currentLocale);
 ---
 
 <div class="links">

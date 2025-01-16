@@ -1,6 +1,9 @@
 ---
-import { EXPERIENCIES } from "@data/experiences";
+import { getExperiencies } from "@data/experiences";
 import TimeLineItem from "./TimeLineItem.astro";
+const { currentLocale = "es" } = Astro;
+
+const EXPERIENCIES = getExperiencies(currentLocale);
 ---
 
 <ol class="timeline">

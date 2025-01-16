@@ -1,14 +1,12 @@
 ---
 import SectionWrapper from "@components/ui/SectionWrapper.astro";
+
+const { i18n } = Astro.props;
 ---
 
 <SectionWrapper id="welcome">
 	<div class="welcome">
-		<h1>
-			Hello! Welcome to my website. My name is Claudio Bustos, I’m a
-			frontend developer, and in this space, you can learn more about me
-			and my work.
-		</h1>
+		<h1>{i18n.WELCOME_INTRODUCTION}</h1>
 	</div>
 </SectionWrapper>
 

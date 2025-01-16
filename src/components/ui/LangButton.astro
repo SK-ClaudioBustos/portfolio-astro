@@ -1,0 +1,22 @@
+---
+const path = Astro.url.pathname;
+
+const label = path === "/" ? "ES" : "EN";
+const url = path === "/" ? "/en" : "/";
+---
+
+<a
+    class="lang-button"
+    role="link"
+    aria-label={`Change language to ${label === "ES" ? "English" : "Spanish"}`}
+    href={url}
+>
+    {label}
+</a>
+
+<style>
+    .lang-button {
+        font-size: 1.3rem;
+        color: var(--c2);
+    }
+</style>

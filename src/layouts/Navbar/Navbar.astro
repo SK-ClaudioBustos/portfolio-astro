@@ -1,13 +1,16 @@
 ---
 import MoonIcon from "@icons/dark-mode/moon.svg";
 import LinksContainer from "./LinksContainer.astro";
+import LangButton from "@components/ui/LangButton.astro";
+
+const { i18n } = Astro.props;
 ---
 
 <nav class="navbar">
     <div class="navbar-content">
         <LinksContainer />
         <div class="buttons">
-            <span>ES</span>
+            <LangButton/>
             <MoonIcon />
         </div>
     </div>

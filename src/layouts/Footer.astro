@@ -2,18 +2,21 @@
 import Link from "@components/ui/Link.astro";
 import GithubIcon from "@icons/social-media/github.svg";
 import LinkedinIcon from "@icons/social-media/linkedin.svg";
+
+const { i18n } = Astro.props;
 ---
 
 <footer class="footer">
     <p>
-        Check out the repository for this project
+        {i18n.FOOTER_REPOSITORY_LINK.TEXT}
         <Link
             classType="link"
             ariaLabel="Go to the repository for this project"
             target="_blank"
             url="https://github.com/SK-ClaudioBustos/portfolio-astro"
         >
-            here
+        {i18n.FOOTER_REPOSITORY_LINK.LINK_TEXT}
+
         </Link>
     </p>
     <div class="social-media-links">
