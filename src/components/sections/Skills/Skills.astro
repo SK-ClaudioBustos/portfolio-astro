@@ -1,13 +1,16 @@
 ---
 import SectionWrapper from "@components/ui/SectionWrapper.astro";
 import SkillsBox from "./SkillsBox.astro";
+import Title from "@components/ui/Title.astro";
 
 const { i18n } = Astro.props;
 ---
 
 <SectionWrapper id="skills">
 	<div class="skills-container">
-		<h1>{i18n.SKILLS_TITLE}</h1>
+		<Title>
+			{i18n.SKILLS_TITLE}
+		</Title>
 		<SkillsBox />
 	</div>
 </SectionWrapper>
@@ -22,12 +25,5 @@ const { i18n } = Astro.props;
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
-
-		& h1 {
-			font-weight: bold;
-			font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
-			letter-spacing: 0.7rem;
-			margin-bottom: 20px;
-		}
 	}
 </style>

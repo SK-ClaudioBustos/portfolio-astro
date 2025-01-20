@@ -9,6 +9,7 @@
     "WELCOME_INTRODUCTION": "Hola! Bienvenidos a mi sitio web. Mi nombre es Claudio Bustos, yo soy un desarrollador web, y en este espacio, podras aprender mas sobre mí y mi trabajo.",
     "SKILLS_TITLE": "Mis conocimientos",
     "EXPERIENCIES": {
+        "TITLE": "Experiencias",
         "EXP_1": {
             "DATE": "Octubre 2024 - Actualmente",
             "TITLE": "Desarrollador Freelancer Fullstack en You Send We Print",

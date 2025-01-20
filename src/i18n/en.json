@@ -9,6 +9,7 @@
     "WELCOME_INTRODUCTION": "Hello! Welcome to my website. My name is Claudio Bustos, I'm a frontend developer, and in this space, you can learn more about me and my work.",
     "SKILLS_TITLE": "My Stack",
     "EXPERIENCIES": {
+        "TITLE": "Experiencies",
         "EXP_1": {
             "DATE": "October 2024 - Present",
             "TITLE": "Freelancer Fullstack Developer on You Send We Print",
