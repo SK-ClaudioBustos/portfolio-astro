@@ -1,4 +1,5 @@
 ---
+import Pill from "@components/ui/Pill.astro";
 import { ExperienceData } from "@type/types";
 
 const { date, title, description, technologies } = Astro.props as ExperienceData;
@@ -12,9 +13,7 @@ const { date, title, description, technologies } = Astro.props as ExperienceData
     <div class="technologies">
         {
             technologies.map(tech => 
-                <div class="tech-item" style={{"--bgc": tech.color}}>
-                    <span>{tech.label}</span>
-                </div>
+                <Pill label={tech.label} color={tech.color} />
             )
         }
     </div>
@@ -30,15 +29,6 @@ const { date, title, description, technologies } = Astro.props as ExperienceData
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-
-            & .tech-item {
-                background-color: var(--bgc);
-                color: var(--c2);
-                font-size: 0.8rem;
-                border: .5px solid var(--c2);
-                border-radius: 50px;
-                padding: 5px 10px;
-            }
         }
 
         & .timeline-marker {

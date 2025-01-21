@@ -1,0 +1,25 @@
+---
+import { HashWithString } from "@type/types";
+
+interface Props {
+    label: string;
+    color: HashWithString;
+}
+
+const { label, color } = Astro.props;
+---
+
+<div class="pill" style={{ "--bgc": color }}>
+    <span>{label}</span>
+</div>
+
+<style>
+    .pill {
+        background-color: var(--bgc);
+        color: var(--c2);
+        font-size: 0.8rem;
+        border: 2px solid color-mix(in srgb, var(--bgc), #000 25%);
+        border-radius: 50px;
+        padding: 5px 10px;
+    }
+</style>
