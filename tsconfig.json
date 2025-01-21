@@ -22,6 +22,9 @@
       ],
       "@i18n/*": [
         "./src/i18n/*"
+      ],
+      "@img/*": [
+        "./src/img/*"
       ]
     },
     "moduleResolution": "node",
