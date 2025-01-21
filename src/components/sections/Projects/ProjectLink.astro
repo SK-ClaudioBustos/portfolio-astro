@@ -1,0 +1,45 @@
+---
+const { url, ariaLabel, text, className = "tl" } = Astro.props;
+---
+
+<div class={`project-link ${className}`}>
+    <slot name="icon" />
+    <a
+        target="_blank"
+        aria-label={ariaLabel}
+        href={url}
+        rel="noopener noreferrer"
+    >
+        {text}
+    </a>
+</div>
+
+<style>
+    .project-link {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #00000050;
+        --separation: 10px;
+
+        & a {
+            color: var(--c2);
+        }
+    }
+    
+    .project-link.tl {
+        z-index: 2;
+        top: var(--separation);
+        left: var(--separation);
+    }
+
+    .project-link.tr {
+        z-index: 3;
+        top: var(--separation);
+        right: var(--separation);
+    }
+</style>

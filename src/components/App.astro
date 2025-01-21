@@ -5,6 +5,7 @@ import Skills from "@sections/Skills/Skills.astro";
 import Welcome from "@sections/Welcome/Welcome.astro";
 
 import { getI18N } from "@i18n/index";
+import Projects from "./sections/Projects/Projects.astro";
 const { currentLocale = "es" } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
@@ -13,4 +14,5 @@ const i18n = getI18N({ currentLocale });
 	<Welcome i18n={i18n} />
 	<Skills i18n={i18n} />
 	<Experience i18n={i18n} />
+	<Projects i18n={i18n} />
 </Layout>

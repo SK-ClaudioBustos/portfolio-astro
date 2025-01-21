@@ -31,6 +31,9 @@
             "DESCRIPTION": "I am developing a multi-user web system with client/server architecture using Laravel, this is the final project that I have to present in order to graduate from my career."
         }
     },
+    "PROJECTS": {
+        "TITLE": "Projects"
+    },
     "FOOTER_REPOSITORY_LINK": {
         "TEXT": "Check out the repository for this project",
         "LINK_TEXT": "here"

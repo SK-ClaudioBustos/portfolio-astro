@@ -31,6 +31,9 @@
             "DESCRIPTION": "Me encuentro realizando el desarrollo de un sistema web multiusuario de arquitectura cliente/servidor utilizando Laravel, este mismo es el proyecto final que me queda presentar para poder recibirme de mi carrera"
 		}
     },
+    "PROJECTS": {
+        "TITLE": "Proyectos"
+    },
     "FOOTER_REPOSITORY_LINK": {
         "TEXT": "Mira el repositorio del proyecto",
         "LINK_TEXT": "aquí"

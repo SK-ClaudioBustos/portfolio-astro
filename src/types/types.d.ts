@@ -27,3 +27,12 @@ export interface ExperienceData {
     description: string;
     technologies: Technology[]
 }
+
+export interface Project {
+    src: string;
+    alt: string;
+    titulo: string;
+    git: string;
+    web: string;
+    technologies: Technology[]
+}

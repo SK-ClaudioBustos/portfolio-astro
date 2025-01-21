@@ -1,0 +1,34 @@
+---
+import SectionWrapper from "@components/ui/SectionWrapper.astro";
+import ProjectItem from "./ProjectItem.astro";
+import Title from "@components/ui/Title.astro";
+import { getProjects } from "@data/projects";
+const { i18n } = Astro.props;
+
+const PROJECTS = getProjects(i18n);
+---
+
+<SectionWrapper id="projects">
+    <div class="projects-container">
+        <Title>
+            {i18n.PROJECTS.TITLE}
+        </Title>
+        <div class="projects-container">
+            {PROJECTS.map((project) => <ProjectItem item={project} />)}
+        </div>
+    </div>
+</SectionWrapper>
+
+<style>
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        & .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+</style>
