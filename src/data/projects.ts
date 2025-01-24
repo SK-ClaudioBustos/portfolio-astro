@@ -20,12 +20,12 @@ export const getProjects = (currentLocale: string) => {
             technologies: [TECHNOLOGIES.Typescript , TECHNOLOGIES.React, TECHNOLOGIES.Next, TECHNOLOGIES.MUI]
         },
         {
-            src: "in-progress",
-            alt: "#",
-            titulo: "In Progress",
-            git: "#",
-            web: "#",
-            technologies: []
+            src: "batman_quiz.webp",
+            alt: "image project batman quiz",
+            titulo: "Batman Quiz",
+            git: "https://github.com/SK-ClaudioBustos/batman-quiz",
+            web: "https://batman-quiz-five.vercel.app",
+            technologies: [TECHNOLOGIES.Typescript , TECHNOLOGIES.React, TECHNOLOGIES.Zustand]
         }
     ];
     return PROJECTS;
