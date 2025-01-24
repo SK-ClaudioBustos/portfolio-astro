@@ -49,4 +49,8 @@ export const TECHNOLOGIES: Technologies = {
         label: "MUi",
         color: "#0073e6",
     },
+    "Zustand": {
+        label: "Zustand",
+        color: "#433E38",
+    },
 }
