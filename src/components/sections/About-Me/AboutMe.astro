@@ -15,7 +15,7 @@ const { i18n } = Astro.props;
         </Title>
         <div class="about-me">
             <div class="img-container">
-                <Image class="img" src={Me} alt="web developer picture" />
+                <Image class="img" src={Me} alt="web developer picture" loading="lazy" fetchpriority="low" />
             </div>
             <div class="text-container">
                 <h1>{i18n.ABOUT.SUBTITLE}</h1>

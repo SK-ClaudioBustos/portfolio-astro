@@ -21,7 +21,7 @@ const url = `/img/${item.src}`;
             ? <div class="project-content"><div class="flex-center proximamente"><ProgressIcon width="50" height="50" /></div></div>
             : (
                 <div class="project-content">
-                    <img class="project-img" src={url} alt={item.alt} />
+                    <img class="project-img" src={url} alt={item.alt} loading="lazy" fetchpriority="low" />
                     <ProjectLink
                         text="Demo"
                         url={item.web}
