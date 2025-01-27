@@ -39,6 +39,11 @@
         "SUBTITLE": "Desarrollador Web",
         "BODY": "Soy estudiante de la carrera analista de sistemas, me dedico al desarrollo de software, en este momento me encuentro cursando la carrera Analista de Sistemas y estoy buscando mi primer empleo dentro del mundo de IT, siempre estoy mejorando mis capacidades y aprendiendo nuevas habilidades."
     },
+    "CV": {
+       "TITLE": "Mi hoja de vida",
+       "BUTTON_TEXT": "Descargar CV",
+       "FILENAME": "CV_es" 
+    },
     "FOOTER_REPOSITORY_LINK": {
         "TEXT": "Mira el repositorio del proyecto",
         "LINK_TEXT": "aquí"
