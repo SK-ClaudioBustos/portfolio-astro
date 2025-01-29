@@ -1,7 +1,6 @@
 ---
 import SectionWrapper from "@components/ui/SectionWrapper.astro";
 import Title from "@components/ui/Title.astro";
-import GmailIcon from "@icons/gmail.svg";
 import { Image } from "astro:assets";
 import Me from "./me.webp";
 
@@ -9,13 +8,18 @@ const { i18n } = Astro.props;
 ---
 
 <SectionWrapper id="about-me">
-    <div>
+    <div class="section">
         <Title>
             {i18n.ABOUT.TITLE}
         </Title>
-        <div class="about-me">
+        <div class="content">
             <div class="img-container">
-                <Image class="img" src={Me} alt="web developer picture" loading="lazy" />
+                <Image
+                    class="img"
+                    src={Me}
+                    alt="web developer picture"
+                    loading="lazy"
+                />
             </div>
             <div class="text-container">
                 <h1>{i18n.ABOUT.SUBTITLE}</h1>
@@ -26,10 +30,10 @@ const { i18n } = Astro.props;
 </SectionWrapper>
 
 <style>
-    .about-me {
+    .content {
         display: flex;
         flex-direction: row;
-        gap: 3rem;
+        gap: 1rem;
 
         & .img-container {
             width: 200px;

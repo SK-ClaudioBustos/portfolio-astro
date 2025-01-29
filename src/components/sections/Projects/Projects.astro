@@ -9,7 +9,7 @@ const PROJECTS = getProjects(i18n);
 ---
 
 <SectionWrapper id="projects">
-    <div class="projects-container">
+    <div class="section">
         <Title>
             {i18n.PROJECTS.TITLE}
         </Title>
@@ -23,12 +23,6 @@ const PROJECTS = getProjects(i18n);
     .projects-container {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-
-        & .projects-container {
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
+        gap: 4rem;
     }
 </style>
