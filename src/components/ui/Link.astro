@@ -8,12 +8,7 @@ interface Props {
     target?: astroHTML.JSX.HTMLAttributeAnchorTarget;
 }
 
-const {
-    url,
-    ariaLabel,
-    classType,
-    target = "_self",
-} = Astro.props;
+const { url, ariaLabel, classType, target = "_self" } = Astro.props;
 ---
 
 <a
@@ -41,5 +36,18 @@ const {
     .link {
         color: var(--c4);
         font-size: inherit;
+    }
+
+    html:not(.dark) .navigation {
+        color: color-mix(in srgb, var(--c1), #fff 15%);
+
+        &:hover {
+            color: var(--c1);
+            filter: drop-shadow(0 0 5px #000);
+        }
+    }
+
+    html:not(.dark) .link {
+        color: color-mix(in srgb, var(--c4), #000 15%);
     }
 </style>

@@ -1,15 +1,15 @@
 ---
-import MoonIcon from "@icons/dark-mode/moon.svg";
-import LinksContainer from "./LinksContainer.astro";
+import DarkModeButton from "./DarkModeButton.astro";
 import LangButton from "./LangButton.astro";
+import LinksContainer from "./LinksContainer.astro";
 ---
 
 <nav class="navbar">
     <div class="navbar-content">
         <LinksContainer />
         <div class="buttons">
-            <LangButton/>
-            <MoonIcon />
+            <LangButton />
+            <DarkModeButton />
         </div>
     </div>
 </nav>
@@ -41,5 +41,10 @@ import LangButton from "./LangButton.astro";
                 font-size: 24px;
             }
         }
+    }
+
+    html:not(.dark) .navbar {
+        background-color: var(--c2);
+        border-bottom: 2px solid var(--c1);
     }
 </style>

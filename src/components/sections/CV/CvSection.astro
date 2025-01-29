@@ -44,8 +44,8 @@ const { i18n } = Astro.props;
         & a button {
             cursor: pointer;
             background-color: var(--c1);
-            font-size: 1.2rem;
             color: color-mix(in srgb, var(--c2), #000 45%);
+            font-size: 1.2rem;
             padding: 5px 10px;
             border: 1px solid #000;
             border-radius: 0 10px;
@@ -54,6 +54,19 @@ const { i18n } = Astro.props;
                 color: var(--c2);
                 background-color: color-mix(in srgb, var(--c1), #fff 15%);
                 border: 1px solid var(--c2);
+            }
+        }
+    }
+
+    html:not(.dark) .cv-section {
+        & a button {
+            background-color: var(--c2);
+            color: color-mix(in srgb, var(--c1), #fff 45%);
+
+            &:hover {
+                color: var(--c2);
+                background-color: color-mix(in srgb, var(--c2), #000 15%);
+                border: 1px solid var(--c1);
             }
         }
     }

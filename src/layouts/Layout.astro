@@ -45,7 +45,6 @@ const currentLocale = Astro.currentLocale;
 		--c4: #facf11;
 	}
 
-	html,
 	body {
 		width: min(1980px, 100%);
 
@@ -74,6 +73,11 @@ const currentLocale = Astro.currentLocale;
 			sans-serif;
 
 		scroll-behavior: smooth;
+	}
+
+	html:not(.dark) body {
+		background-image: radial-gradient(color-mix(in srgb, var(--c1), #fff 85%) 3px, var(--c2) 1px);
+		color: var(--c1);
 	}
 
 	a {

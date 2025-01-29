@@ -48,6 +48,7 @@ const { date, title, description, technologies } = Astro.props as ExperienceData
             margin-bottom: 8px;
             font-size: 0.875rem;
             color: #9ca3af;
+            font-weight: bold;
         }
 
         & .timeline-title {
@@ -61,6 +62,25 @@ const { date, title, description, technologies } = Astro.props as ExperienceData
             font-size: 1rem;
             color: #6b7280;
             margin-bottom: 16px;
+        }
+    }
+
+    html:not(.dark) .timeline-item {
+        & .timeline-marker {
+            background-color: var(--c2);
+            border: 2px solid color-mix(in srgb, var(--c3), #fff 25%);
+        }
+
+        & .timeline-date {
+            color: #212121;
+        }
+
+        & .timeline-title {
+            color: var(--c1);
+        }
+
+        & .timeline-text {
+            color: #000;
         }
     }
 </style>
