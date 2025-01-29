@@ -22,13 +22,13 @@
         },
         "EXP_3": {
             "DATE": "Abril 2023 - October 2024",
-            "TITLE": "Desarrollador Fullstack in Public Prosecutor's Office",
-            "DESCRIPTION": "En está pasantía me encarge del desarrollo de nuevas funcionalidades, definicion de interfaces y componentes genéricos funcionales, con Mui Component Library + JsonForms + React js, que luego se incorporaban dentro del sistema principal el cuál se comunica con diferentes microservicios, principalmente utiliza Graphql con un servidor Nest Js en el cual configuramos adicionalmente un servicio de login con Keycloak y un servicio para almacenar archivos con MinioJS. Tambien ayude a desarrollar una aplicación que servirá para agilizar la toma de denuncias de cada persona que se presente en cada comisaría de Entre Ríos"
+            "TITLE": "Desarrollador Fullstack en Ministerio Public Fiscal de Paraná",
+            "DESCRIPTION": "En está pasantía me encarge del desarrollo de nuevas funcionalidades, definicion de interfaces y componentes genéricos funcionales, con Mui Component Library + JsonForms + React js, que luego se incorporaban dentro del sistema principal el cuál se comunica con diferentes microservicios, principalmente utiliza Graphql con un servidor Nest Js en el cual configuramos adicionalmente un servicio de login con Keycloak y un servicio para almacenar archivos con MinioJS. Tambien ayude a desarrollar una aplicación que servirá para agilizar la toma de denuncias de cada persona que se presente en cada comisaría de Entre Ríos."
         },
         "EXP_4": {
             "DATE": "Marzo 2023 - Actualmente",
-            "TITLE": "Fullstack Developer on Kinefitness",
-            "DESCRIPTION": "Me encuentro realizando el desarrollo de un sistema web multiusuario de arquitectura cliente/servidor utilizando Laravel, este mismo es el proyecto final que me queda presentar para poder recibirme de mi carrera"
+            "TITLE": "Desarrollador Fullstack en Kinefitness",
+            "DESCRIPTION": "Me encuentro realizando el desarrollo de un sistema web multiusuario de arquitectura cliente/servidor utilizando Laravel, este mismo es el proyecto final que me queda presentar para poder recibirme de mi carrera."
         }
     },
     "PROJECTS": {
