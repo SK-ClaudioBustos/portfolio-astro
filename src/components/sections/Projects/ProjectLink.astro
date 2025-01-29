@@ -26,9 +26,14 @@ const { url, ariaLabel, text, className = "tl" } = Astro.props;
         background-color: #00000050;
         --separation: 10px;
 
+        &:hover {
+            background-color: #00000090;    
+        }
+
         & a {
             color: var(--c2);
         }
+
     }
     
     .project-link.tl {
