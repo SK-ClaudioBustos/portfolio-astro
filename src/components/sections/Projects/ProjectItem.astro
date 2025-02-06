@@ -1,10 +1,9 @@
 ---
+import Pill from "@components/ui/Pill.astro";
 import ComputerIcon from "@icons/computer.svg";
 import GithubIcon from "@icons/social-media/github.svg";
-import { Project } from "@type/types";
+import { Project, Technology } from "@type/types";
 import ProjectLink from "./ProjectLink.astro";
-import ProgressIcon  from "@icons/ProgressIcon.astro";
-import Pill from "@components/ui/Pill.astro";
 
 interface Props {
     item: Project;
@@ -16,37 +15,37 @@ const url = `/img/${item.src}`;
 
 <article class="project-item">
     <p>{item.titulo}</p>
+    <div class="project-content">
+        <img
+            class="project-img"
+            src={url}
+            alt={item.alt}
+            loading="lazy"
+            fetchpriority="low"
+        />
+        <ProjectLink
+            text="Demo"
+            url={item.web}
+            ariaLabel={`link to ${item.titulo} project demostration`}
+        >
+            <ComputerIcon slot="icon" />
+        </ProjectLink>
+        <ProjectLink
+            text="Source Code"
+            url={item.git}
+            ariaLabel={`link to ${item.titulo} repository`}
+            className="tr"
+        >
+            <GithubIcon slot="icon" />
+        </ProjectLink>
+    </div>
+    <div class="project-pills">
         {
-            item.src === "in-progress"
-            ? <div class="project-content"><div class="flex-center proximamente"><ProgressIcon width="50" height="50" /></div></div>
-            : (
-                <div class="project-content">
-                    <img class="project-img" src={url} alt={item.alt} loading="lazy" fetchpriority="low" />
-                    <ProjectLink
-                        text="Demo"
-                        url={item.web}
-                        ariaLabel={`link to ${item.titulo} project demostration`}
-                    >
-                        <ComputerIcon slot="icon" />
-                    </ProjectLink>
-                    <ProjectLink
-                        text="Source Code"
-                        url={item.git}
-                        ariaLabel={`link to ${item.titulo} repository`}
-                        className="tr"
-                    >
-                        <GithubIcon slot="icon" />
-                    </ProjectLink>
-                </div>
-                <div class="project-pills">
-                    {
-                        item.technologies.map((tech) => 
-                            <Pill color={tech.color} label={tech.label}/>
-                        )
-                    }
-                </div>   
-            )
+            item.technologies.map((tech: Technology) => (
+                <Pill color={tech.color} label={tech.label} />
+            ))
         }
+    </div>
 </article>
 
 <style>
@@ -60,21 +59,18 @@ const url = `/img/${item.src}`;
 
         & .project-content {
             position: relative;
-            width: 530px;
-            height: 330px;
+            width: 100%;
+            max-width: 530px;
+            aspect-ratio: 16 / 10;
             border: 1px solid var(--c2);
             background-color: var(--c3);
             border-radius: 10px;
-
-            & .proximamente {
-                width: 100%;
-                height: 100%;
-            }
 
             & .project-img {
                 border-radius: 10px;
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
             }
         }
 
