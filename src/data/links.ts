@@ -21,6 +21,10 @@ export const getLinks = (currentLocale: string) => {
             elementId: "#about-me",
             label: i18n.NAV_LINKS.L4,
         },
+        {
+            elementId: "#cv",
+            label: "CV",
+        },
     ];
     return LINKS;
 }
