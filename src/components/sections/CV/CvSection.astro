@@ -6,7 +6,7 @@ const { i18n } = Astro.props;
 ---
 
 <SectionWrapper id="cv">
-    <div class="cv-section">
+    <div class="section cv-section">
         <Title>
             {i18n.CV.TITLE}
         </Title>
@@ -23,11 +23,7 @@ const { i18n } = Astro.props;
 
 <style>
     .cv-section {
-        margin-top: 3rem;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
         align-items: center;
 
         & .img-container {
