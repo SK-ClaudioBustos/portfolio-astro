@@ -1,28 +1,98 @@
 ---
 import Link from "@components/ui/Link.astro";
+import MenuIcon from "@icons/Menu.astro";
 import { getLinks } from "@data/links";
 
 const { currentLocale = "es" } = Astro;
 const LINKS = getLinks(currentLocale);
 ---
 
-<div class="links">
-    {
-        LINKS.map(({ elementId, label }) => (
-            <Link
-                url={elementId}
-                classType="navigation"
-                ariaLabel={`${label} section`}
-            >
-                {label}
-            </Link>
-        ))
-    }
+<div>
+    <div class="responsive-links">
+        <button id="toggle-button" class="toggle-links">
+            <MenuIcon class="responsive-icon" />
+        </button>
+    </div>
+    <div class="links" id="links">
+        {
+            LINKS.map(({ elementId, label }) => (
+                <Link
+                    url={elementId}
+                    classType="navigation"
+                    ariaLabel={`${label} section`}
+                >
+                    {label}
+                </Link>
+            ))
+        }
+    </div>
 </div>
+
+<script is:inline>
+    const Button = document.getElementById("toggle-button");
+    const Links = document.getElementById("links");
+
+    const handleClick = () => {
+        Links.classList.toggle("show");
+    };
+
+    Button.addEventListener("click",handleClick);
+</script>
 
 <style>
     .links {
         display: flex;
         gap: 1.5rem;
+    }
+
+    .responsive-links {
+        display: none;
+
+        .toggle-links {
+            background-color: inherit;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        & svg {
+            display: none;
+        }
+    }
+
+    html:not(.dark) .responsive-icon {
+        color: #000;
+    }
+
+    html.dark .responsive-icon {
+        color: #fff;
+    }
+
+    @media (width <=768px) {
+        .links {
+            display: none;
+        }
+
+        .links.show {
+            position: absolute;
+            background-color: color-mix(in srgb, var(--c1), #fff 1%);
+            top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 15px;
+        }
+
+        .responsive-links {
+            height: 100%;
+            display: block;
+
+            .toggle-links {
+                display: block;
+                & svg {
+                    display: block;
+                }
+            }
+        }
     }
 </style>
