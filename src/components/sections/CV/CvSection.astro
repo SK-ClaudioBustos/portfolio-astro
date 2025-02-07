@@ -11,7 +11,7 @@ const { i18n } = Astro.props;
             {i18n.CV.TITLE}
         </Title>
         <div class="img-container">
-            <img src="/CV.webp" alt="CV image" />
+            <img src={`${i18n.CV.FILENAME}.webp`} alt="CV image" />
         </div>
         <a href=`/pdf/${i18n.CV.FILENAME}.pdf` download aria-label="button for download CV">
             <button>
