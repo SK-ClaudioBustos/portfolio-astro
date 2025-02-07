@@ -22,7 +22,7 @@
         },
         "EXP_3": {
             "DATE": "Abril 2023 - October 2024",
-            "TITLE": "Desarrollador Fullstack en Ministerio Public Fiscal de Paraná",
+            "TITLE": "Desarrollador Fullstack en el Ministerio Público Fiscal de Paraná",
             "DESCRIPTION": "En está pasantía me encarge del desarrollo de nuevas funcionalidades, definicion de interfaces y componentes genéricos funcionales, con Mui Component Library + JsonForms + React js, que luego se incorporaban dentro del sistema principal el cuál se comunica con diferentes microservicios, principalmente utiliza Graphql con un servidor Nest Js en el cual configuramos adicionalmente un servicio de login con Keycloak y un servicio para almacenar archivos con MinioJS. Tambien ayude a desarrollar una aplicación que servirá para agilizar la toma de denuncias de cada persona que se presente en cada comisaría de Entre Ríos."
         },
         "EXP_4": {
