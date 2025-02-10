@@ -45,6 +45,10 @@ const currentLocale = Astro.currentLocale;
 		--c4: #facf11;
 	}
 
+	html {
+		scroll-behavior: smooth;
+	}
+
 	body {
 		margin: 0;
 		display: flex;
@@ -69,8 +73,6 @@ const currentLocale = Astro.currentLocale;
 			"Open Sans",
 			"Helvetica Neue",
 			sans-serif;
-
-		scroll-behavior: smooth;
 	}
 
 	html:not(.dark) body {
