@@ -1,7 +1,7 @@
 import { Project } from "@type/types";
 import { TECHNOLOGIES } from "./technologies";
 
-export const getProjects = (currentLocale: string) => {
+export const getProjects = () => {
     const PROJECTS: Project[] = [
         {
             src: "pokemon_wiki.webp",
