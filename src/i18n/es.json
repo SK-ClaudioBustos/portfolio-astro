@@ -8,6 +8,19 @@
     "PAGE_TITLE": "Claudio Bustos | Desarrollador Web",
     "WELCOME_INTRODUCTION": "Hola! Bienvenidos a mi sitio web. Mi nombre es Claudio Bustos, yo soy un desarrollador web, y en este espacio, podras aprender mas sobre mí y mi trabajo.",
     "SKILLS_TITLE": "Mis conocimientos",
+    "TRAINING": {
+        "TITLE": "Formación",
+        "T1": {
+            "TITLE": "Universidad Autónoma de Entre Ríos FCYT",
+            "SUBTITLE": "Analista de Sistemas",
+            "BODY": "En esta carrera aprendí los principios de la programación, manejo de linux y los principios de la normalizacion de una Base de Datos."
+        },
+        "T2": {
+            "TITLE": "Estudios Autodidactas",
+            "SUBTITLE": "Desarrollador Frontend",
+            "BODY": "Los estudios que realice de manera autodidacta van desde realizar cursos online, ver videos orientados a temas sobre programación web, leer documentación, y blogs IT."
+        }
+    },
     "EXPERIENCIES": {
         "TITLE": "Experiencias",
         "EXP_1": {

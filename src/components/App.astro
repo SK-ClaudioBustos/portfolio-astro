@@ -7,6 +7,7 @@ import { getI18N } from "@i18n/index";
 import AboutMe from "./sections/About-Me/AboutMe.astro";
 import CvSection from "./sections/CV/CvSection.astro";
 import Projects from "./sections/Projects/Projects.astro";
+import Training from "./sections/Training/Training.astro";
 
 const { currentLocale = "es" } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -15,6 +16,7 @@ const i18n = getI18N({ currentLocale });
 <Layout title={i18n.PAGE_TITLE} i18n={i18n}>
 	<Welcome i18n={i18n} />
 	<Skills i18n={i18n} />
+	<Training i18n={i18n} />
 	<Experience i18n={i18n} />
 	<Projects i18n={i18n} />
 	<AboutMe i18n={i18n} />

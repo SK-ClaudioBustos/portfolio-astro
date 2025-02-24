@@ -8,6 +8,19 @@
     "PAGE_TITLE": "Claudio Bustos | Web Developer",
     "WELCOME_INTRODUCTION": "Hello! Welcome to my website. My name is Claudio Bustos, I'm a frontend developer, and in this space, you can learn more about me and my work.",
     "SKILLS_TITLE": "My Stack",
+    "TRAINING": {
+        "TITLE": "Training",
+        "T1": {
+            "TITLE": "Autonomous University of Entre Ríos FCYT",
+            "SUBTITLE": "System Analist",
+            "BODY": "In this degree program, I learned the principles of programming, Linux management, and the principles of database normalization."
+        },
+        "T2": {
+            "TITLE": "Self-Taught Studies",
+            "SUBTITLE": "Frontend Developer",
+            "BODY": "The studies I conducted on my own range from taking online courses, watching videos focused on web programming topics, reading documentation, and IT blogs."
+        }
+    },
     "EXPERIENCIES": {
         "TITLE": "Experiencies",
         "EXP_1": {

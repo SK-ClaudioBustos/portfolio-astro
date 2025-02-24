@@ -22,6 +22,10 @@ export const getLinks = (currentLocale: string) => {
             label: i18n.NAV_LINKS.L4,
         },
         {
+            elementId: "#training",
+            label: i18n.TRAINING.TITLE,
+        },
+        {
             elementId: "#cv",
             label: "CV",
         },

@@ -1,0 +1,42 @@
+---
+import SectionWrapper from "@components/ui/SectionWrapper.astro";
+import Title from "@components/ui/Title.astro";
+import TrainingItem from "./TrainingItem.astro";
+import { getTraining } from "@data/training";
+
+const { i18n } = Astro.props;
+const { currentLocale = "es" } = Astro;
+const TRAINING = getTraining(currentLocale);
+---
+
+<SectionWrapper id="training">
+    <div class="training-content">
+        <Title>
+            {i18n.TRAINING.TITLE}
+        </Title>
+        <div class="training-box">
+            {
+                TRAINING.map((item) => (
+                    <TrainingItem item={item} />
+                ))
+            }
+        </div>
+    </div>
+</SectionWrapper>
+
+<style>
+    .training-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+
+        & .training-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+    }
+</style>

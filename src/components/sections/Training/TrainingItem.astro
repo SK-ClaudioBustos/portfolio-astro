@@ -1,0 +1,39 @@
+---
+const { item } = Astro.props;
+---
+
+<div class="training">
+    <div class="main-text">
+        <h3>{item.title}</h3>
+        <h4>{item.subtitle}</h4>
+    </div>
+    <p>{item.body}</p>
+</div>
+
+<style>
+    .training {
+        background-color: color-mix(in srgb, var(--c1), #fff 5%);
+        width: 300px;
+        min-height: 230px;
+        color: var(--c2);
+        padding: 20px 15px 30px;
+        clip-path: polygon(90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%, 0 0);
+        border-left: 2px solid var(--c2);
+        border-right: 2px solid var(--c2);
+        transition: all 1s;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        & .main-text {
+            flex-grow: 1;
+            text-align: center;
+        }
+        & p {
+            text-align: justify;
+        }
+    }
+</style>
