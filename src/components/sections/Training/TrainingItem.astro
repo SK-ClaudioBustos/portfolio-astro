@@ -36,4 +36,11 @@ const { item } = Astro.props;
             text-align: justify;
         }
     }
+
+    html:not(.dark) .training {
+        background-color: color-mix(in srgb, var(--c2), #000 5%);
+        border-left: 2px solid var(--c1);
+        border-right: 2px solid var(--c1);
+        color: var(--c1);
+    }
 </style>
