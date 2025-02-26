@@ -1,13 +1,13 @@
 {
     "NAV_LINKS": {
-        "L1": "Conocimientos",
+        "L1": "Habilidades",
         "L2": "Experiencia",
         "L3": "Proyectos",
         "L4": "Sobre mí"
     },
     "PAGE_TITLE": "Claudio Bustos | Desarrollador Web",
     "WELCOME_INTRODUCTION": "Hola! Bienvenidos a mi sitio web. Mi nombre es Claudio Bustos, yo soy un desarrollador web, y en este espacio, podras aprender mas sobre mí y mi trabajo.",
-    "SKILLS_TITLE": "Mis conocimientos",
+    "SKILLS_TITLE": "Habilidades",
     "TRAINING": {
         "TITLE": "Formación",
         "T1": {
