@@ -55,8 +55,16 @@
     "CV": {
         "TITLE": "My CV",
         "BUTTON_TEXT": "Download CV",
-        "FILENAME": "CV-Claudio-Bustos-en" 
-     },
+        "FILENAME": "CV-Claudio-Bustos-en"
+    },
+    "CONTACT": {
+        "TITLE": "Contact me",
+        "INPUT_NAME_LABEL": "Name",
+        "INPUT_NAME_PLACEHOLDER": "Your Name",
+        "INPUT_MESSAGE_LABEL": "Message",
+        "INPUT_MESSAGE_PLACEHOLDER": "Send me a message :-)",
+        "BUTTON": "Send"
+    },
     "FOOTER_REPOSITORY_LINK": {
         "TEXT": "Check out the repository for this project",
         "LINK_TEXT": "here"

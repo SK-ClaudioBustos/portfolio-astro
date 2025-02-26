@@ -57,6 +57,14 @@
        "BUTTON_TEXT": "Descargar CV",
        "FILENAME": "CV-Claudio-Bustos-es" 
     },
+    "CONTACT": {
+        "TITLE": "Hablemos",
+        "INPUT_NAME_LABEL": "Nombre",
+        "INPUT_NAME_PLACEHOLDER": "Tu Nombre",
+        "INPUT_MESSAGE_LABEL": "Mensaje",
+        "INPUT_MESSAGE_PLACEHOLDER": "Envíame un mensaje :-)",
+        "BUTTON": "Enviar"
+    },
     "FOOTER_REPOSITORY_LINK": {
         "TEXT": "Mira el repositorio del proyecto",
         "LINK_TEXT": "aquí"

@@ -29,6 +29,10 @@ export const getLinks = (currentLocale: string) => {
             elementId: "#cv",
             label: "CV",
         },
+        {
+            elementId: "#contact",
+            label: i18n.CONTACT.TITLE,
+        },
     ];
     return LINKS;
 }
