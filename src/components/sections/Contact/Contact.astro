@@ -12,7 +12,7 @@ const { i18n } = Astro.props;
         </Title>
         <div class="contact-content">
             <div class="message-window flex-center" id="message-window">
-                <h1 id="message"></h1>
+                <h1 id="user_message"></h1>
             </div>
             <form
                 id="form"
@@ -79,7 +79,7 @@ const { i18n } = Astro.props;
             try {
                 const formData = new FormData(Form);
                 const MessageWindow = document.getElementById("message-window");
-                const MessageElement = document.getElementById("message");
+                const MessageElement = document.getElementById("user_message");
                 const response = await fetch(Form.action, {
                     method: Form.method,
                     body: formData,
