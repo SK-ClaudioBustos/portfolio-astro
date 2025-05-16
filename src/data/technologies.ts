@@ -35,7 +35,7 @@ export const TECHNOLOGIES: Technologies = {
     },
     "Next": {
         label: "Next js",
-        color: "#000",
+        color: "#787878",
     },
     "Graphql": {
         label: "GraphQL",
