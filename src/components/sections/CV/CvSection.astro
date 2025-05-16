@@ -13,12 +13,13 @@ const { i18n } = Astro.props;
     <div class="img-container">
       <img
         src={`/cv-imgs/${i18n.CV.FILENAME}.webp`}
-        alt="CV image"
+        alt="Vista previa del currículum de Claudio Bustos"
         loading="lazy"
         fetchpriority="low"
       />
     </div>
     <a
+      role="button"
       class="download-button"
       href={`/pdf/${i18n.CV.FILENAME}.pdf`}
       download
@@ -46,7 +47,7 @@ const { i18n } = Astro.props;
       }
     }
 
-    a.download-button {
+    & a.download-button {
       background-color: #000;
       color: #fff;
       font-size: 1.25rem;
@@ -56,19 +57,14 @@ const { i18n } = Astro.props;
       text-decoration: none;
       display: inline-block;
       transition: all 0.2s ease;
-      filter: drop-shadow(0 0 5px #000);
-    }
 
-    a.download-button:hover,
-    a.download-button:focus-visible {
-      background-color: #1a1a1a;
-      outline: none;
-    }
-
-    a.download-button:focus-visible {
-      box-shadow:
-        0 0 0 3px #fff,
-        0 0 0 6px #007acc;
+      &:focus-visible {
+        background-color: #3139d4;
+        outline: none;
+        box-shadow:
+          0 0 0 3px #fff,
+          0 0 0 6px #007acc;
+      }
     }
   }
 </style>
