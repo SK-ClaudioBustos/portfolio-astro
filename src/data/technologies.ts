@@ -53,4 +53,8 @@ export const TECHNOLOGIES: Technologies = {
         label: "Zustand",
         color: "#433E38",
     },
+    "Tanstack_Query":{
+        label: "Tanstack Query",
+        color: "#F49113"
+    }
 }

@@ -19,13 +19,12 @@ const { i18n } = Astro.props;
       />
     </div>
     <a
+      class="download-button"
       href={`/pdf/${i18n.CV.FILENAME}.pdf`}
       download
       aria-label="button for download CV"
     >
-      <button>
-        {i18n.CV.BUTTON_TEXT}
-      </button>
+      {i18n.CV.BUTTON_TEXT}
     </a>
   </div>
 </SectionWrapper>
@@ -47,32 +46,29 @@ const { i18n } = Astro.props;
       }
     }
 
-    & a button {
-      cursor: pointer;
-      background-color: var(--c1);
-      color: color-mix(in srgb, var(--c2), #000 45%);
-      font-size: 1.2rem;
-      padding: 5px 10px;
-      border: 1px solid #fff;
-      border-radius: 0 10px;
-
-      &:hover {
-        color: var(--c2);
-        background-color: color-mix(in srgb, var(--c1), #fff 15%);
-        border: 1px solid var(--c2);
-      }
+    a.download-button {
+      background-color: #000;
+      color: #fff;
+      font-size: 1.25rem;
+      padding: 0.75rem 1.25rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s ease;
+      filter: drop-shadow(0 0 5px #000);
     }
-  }
 
-  html:not(.dark) .cv-section {
-    & a button {
-      background-color: var(--c2);
-      color: #000;
-      border: 1px solid #000;
-      &:hover {
-        color: var(--c2);
-        background-color: #00000070;
-      }
+    a.download-button:hover,
+    a.download-button:focus-visible {
+      background-color: #1a1a1a;
+      outline: none;
+    }
+
+    a.download-button:focus-visible {
+      box-shadow:
+        0 0 0 3px #fff,
+        0 0 0 6px #007acc;
     }
   }
 </style>

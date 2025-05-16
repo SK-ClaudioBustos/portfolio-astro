@@ -15,8 +15,7 @@ const { i18n } = Astro.props;
             target="_blank"
             url="https://github.com/SK-ClaudioBustos/portfolio-astro"
         >
-        {i18n.FOOTER_REPOSITORY_LINK.LINK_TEXT}
-
+            {i18n.FOOTER_REPOSITORY_LINK.LINK_TEXT}
         </Link>
     </p>
     <div class="social-media-links">
@@ -26,7 +25,7 @@ const { i18n } = Astro.props;
             url="https://www.linkedin.com/in/claudio-paul-bustos-rodríguez-395a0631a/"
             ariaLabel="Visit my LinkedIn profile"
         >
-            <LinkedinIcon size={25}/>
+            <LinkedinIcon />
         </Link>
         <Link
             classType="link"
@@ -34,7 +33,7 @@ const { i18n } = Astro.props;
             url="https://github.com/SK-ClaudioBustos"
             ariaLabel="Visit my Github account"
         >
-            <GithubIcon size={25}/>
+            <GithubIcon />
         </Link>
     </div>
 </footer>

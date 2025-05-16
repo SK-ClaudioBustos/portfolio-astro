@@ -66,7 +66,7 @@
         "BUTTON": "Send"
     },
     "FOOTER_REPOSITORY_LINK": {
-        "TEXT": "Check out the repository for this project",
-        "LINK_TEXT": "here"
+        "TEXT": "Check out ",
+        "LINK_TEXT": "the repository for this project here"
     }
 }

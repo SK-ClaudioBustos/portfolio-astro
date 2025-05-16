@@ -12,7 +12,6 @@ const { url, ariaLabel, classType, target = "_self" } = Astro.props;
 ---
 
 <a
-    role={classType}
     target={target}
     class={classType}
     aria-label={ariaLabel}
@@ -24,7 +23,7 @@ const { url, ariaLabel, classType, target = "_self" } = Astro.props;
 
 <style>
     .navigation {
-        color: color-mix(in srgb, var(--c2), #000 45%);
+        color: color-mix(in srgb, var(--c2), #000 25%);
         font-size: inherit;
 
         &:hover {
