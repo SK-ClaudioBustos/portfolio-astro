@@ -1,6 +1,5 @@
 ---
 import "@fontsource-variable/onest";
-import { ClientRouter } from "astro:transitions";
 import Footer from "./Footer.astro";
 import Navbar from "./Navbar/Navbar.astro";
 
@@ -18,7 +17,6 @@ const currentLocale = Astro.currentLocale;
 			name="description"
 			content="Portafolio web de Claudio Bustos desarrollador web Frontend"
 		/>
-		<ClientRouter />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
