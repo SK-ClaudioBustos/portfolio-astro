@@ -1,78 +1,81 @@
 ---
 import MoonIcon from "@icons/dark-mode/MoonIcon.astro";
 import SunIcon from "@icons/dark-mode/SunIcon.astro";
-
-const mode = "light";
 ---
 
-<button type="button" id="theme-button" class="dm-button" aria-label={`set ${mode} mode`}>
-    <MoonIcon id="moon-icon" fill="black" />
-    <SunIcon id="sun-icon" stroke="white" />
+<button
+  type="button"
+  id="theme-button"
+  class="dm-button"
+  aria-label={`switch theme mode website`}
+>
+  <MoonIcon id="moon-icon" fill="black" />
+  <SunIcon id="sun-icon" stroke="white" />
 </button>
 
 <script is:inline>
-    // 1 Recuperamos el theme que quedo guardado previamente
-    const theme = (() => {
-        // 1.1 Sino existe le asignamos ""
-        const localStorageTheme = localStorage?.getItem("theme") ?? "";
+  // 1 Recuperamos el theme que quedo guardado previamente
+  const theme = (() => {
+    // 1.1 Sino existe le asignamos ""
+    const localStorageTheme = localStorage?.getItem("theme") ?? "";
 
-        // 1.2 Si existe un theme lo devolvemos
-        if (["dark", "light"].includes(localStorageTheme)) {
-            return localStorageTheme;
-        }
-
-        // 1.3 Sino existe un theme guardado previamente verificamos si el theme del navegador está en modo dark
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            return "dark";
-        }
-        // 1.4 Devolvemos por defecto el modo light
-        return "light";
-    })();
-
-    // 2 Asignamos la clase correspondiente a la etiqueta HTML principal
-    if (theme === "light") {
-        document.documentElement.classList.remove("dark");
-    } else {
-        document.documentElement.classList.add("dark");
+    // 1.2 Si existe un theme lo devolvemos
+    if (["dark", "light"].includes(localStorageTheme)) {
+      return localStorageTheme;
     }
 
-    // 3 Guardamos el theme seleccionado
-    window.localStorage.setItem("theme", theme);
+    // 1.3 Sino existe un theme guardado previamente verificamos si el theme del navegador está en modo dark
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    // 1.4 Devolvemos por defecto el modo light
+    return "light";
+  })();
 
-    // 4 Esta ultima parte del script es para definir la funcion que se va a ejecutar en caso de dar click sobre el DarkModeButton
-    const handleToggleClick = () => {
-        const element = document.documentElement;
-        element.classList.toggle("dark");
+  // 2 Asignamos o desasignamos la clase correspondiente a la etiqueta HTML principal dependiendo el modo
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
 
-        const isDark = element.classList.contains("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-    };
-    document
-        .getElementById("theme-button")
-        ?.addEventListener("click", handleToggleClick);
+  // 3 Guardamos el theme seleccionado
+  window.localStorage.setItem("theme", theme);
+
+  // 4 Esta ultima parte del script es para definir la funcion que se va a ejecutar en caso de dar click sobre el DarkModeButton
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    element.classList.toggle("dark");
+
+    const isDark = element.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  };
+  document
+    .getElementById("theme-button")
+    ?.addEventListener("click", handleToggleClick);
 </script>
 
 <style>
-    .dm-button {
-        outline: none;
-        border: none;
-        background-color: inherit;
-        cursor: pointer;
-    }
+  .dm-button {
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
 
-    html.dark #moon-icon {
-        display: none;
-    }
+  html.dark #moon-icon {
+    display: none;
+  }
 
-    html:not(.dark) #moon-icon {
-        display: block;
-    }
+  html:not(.dark) #moon-icon {
+    display: block;
+  }
 
-    html.dark #sun-icon {
-        display: block;
-    }
+  html.dark #sun-icon {
+    display: block;
+  }
 
-    html:not(.dark) #sun-icon {
-        display: none;
-    }
+  html:not(.dark) #sun-icon {
+    display: none;
+  }
 </style>
