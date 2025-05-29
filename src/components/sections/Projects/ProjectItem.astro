@@ -2,11 +2,12 @@
 import Pill from "@components/ui/Pill.astro";
 import ComputerIcon from "@icons/computer.svg";
 import GithubIcon from "@icons/social-media/github.svg";
+import Arrow from "@icons/Arrow.astro";
 import { Project, Technology } from "@type/types";
 import ProjectLink from "./ProjectLink.astro";
 
 interface Props {
-    item: Project;
+  item: Project;
 }
 
 const { item } = Astro.props;
@@ -14,74 +15,118 @@ const url = `/img/${item.src}`;
 ---
 
 <article class="project-item">
-    <p>{item.titulo}</p>
-    <div class="project-content">
-        <img
-            class="project-img"
-            src={url}
-            alt={item.alt}
-            loading="lazy"
-            fetchpriority="low"
-        />
-        <ProjectLink
-            text="Demo"
-            url={item.web}
-            ariaLabel={`link to ${item.titulo} project demostration`}
-        >
-            <ComputerIcon slot="icon" stroke="#fff" />
-        </ProjectLink>
-        <ProjectLink
-            text="Source Code"
-            url={item.git}
-            ariaLabel={`link to ${item.titulo} repository`}
-            className="tr"
-        >
-            <GithubIcon slot="icon" stroke="#fff" />
-        </ProjectLink>
+  <p>{item.titulo}</p>
+  <div class="project-content">
+    <img
+      class="project-img"
+      src={url}
+      alt={item.alt}
+      loading="lazy"
+      fetchpriority="low"
+    />
+    <ProjectLink
+      text="Demo"
+      url={item.web}
+      ariaLabel={`link to ${item.titulo} project demostration`}
+    >
+      <ComputerIcon slot="icon" stroke="#fff" />
+    </ProjectLink>
+    <ProjectLink
+      text="Source Code"
+      url={item.git}
+      ariaLabel={`link to ${item.titulo} repository`}
+      className="tr"
+    >
+      <GithubIcon slot="icon" stroke="#fff" />
+    </ProjectLink>
+    <div class="backdrop">
+      <Arrow class="little-arrow" />
+      <p>{item.description}</p>
     </div>
-    <div class="project-pills">
-        {
-            item.technologies.map((tech: Technology) => (
-                <Pill color={tech.color} label={tech.label} />
-            ))
-        }
-    </div>
+  </div>
+  <div class="project-pills">
+    {
+      item.technologies.map((tech: Technology) => (
+        <Pill color={tech.color} label={tech.label} />
+      ))
+    }
+  </div>
 </article>
 
 <style>
-    .project-item {
-        text-align: center;
+  .project-item {
+    text-align: center;
+
+    & p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    & .project-content {
+      position: relative;
+      width: 100%;
+      max-width: 530px;
+      aspect-ratio: 16 / 10;
+      border-radius: 10px;
+      overflow: hidden;
+
+      & .project-img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid var(--c2);
+      }
+
+      & .backdrop {
+        position: absolute;
+        bottom: 0;
+        border-radius: 0 0 10px 10px;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(0 0 0 / 70%);
+        padding: 0px 15px;
+        transform: translateY(110px);
+        transition: transform 0.3s ease-out;
+
+        & button {
+          background-color: transparent;
+          border: none;
+          color: #fff;
+        }
 
         & p {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+          text-wrap: balance;
+          font-size: 1.15em;
+        }
+      }
+
+      & .little-arrow {
+        transition: transform 0.4s ease-out;
+      }
+
+      &:hover {
+        .backdrop {
+          transform: translateY(0);
         }
 
-        & .project-content {
-            position: relative;
-            width: 100%;
-            max-width: 530px;
-            aspect-ratio: 16 / 10;
-            border-radius: 10px;
-
-            & .project-img {
-                border-radius: 10px;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border: 1px solid var(--c2);
-            }
+        .little-arrow {
+            transform: rotate(180deg);
         }
-
-        & .project-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 10px 0;
-        }
+      }
     }
 
-    html:not(.dark) .project-item .project-content .project-img {
-        border: 1px solid var(--c1);
+    & .project-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 10px 0;
     }
+  }
+
+  html:not(.dark) .project-item .project-content .project-img {
+    border: 1px solid var(--c1);
+  }
 </style>

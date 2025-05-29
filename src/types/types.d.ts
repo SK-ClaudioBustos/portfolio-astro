@@ -34,5 +34,6 @@ export interface Project {
     titulo: string;
     git: string;
     web: string;
-    technologies: Technology[]
+    technologies: Technology[];
+    description: string;
 }
