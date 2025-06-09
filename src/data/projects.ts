@@ -13,6 +13,15 @@ export const getProjects = () => {
             description: 'Pagina web para consultar informacion de pokemons de la POKE API, trate de lograr la mejor experiencia de usuario optimizando la carga de imagenes y de informacíon.'
         },
         {
+            src: "kinefitness.webp",
+            alt: "project kinefitness",
+            titulo: "Kinefitness",
+            git: "https://github.com/SS-Estudio-Informatico/kine",
+            web: "#",
+            technologies: [TECHNOLOGIES.PHP , TECHNOLOGIES.Laravel, TECHNOLOGIES.Livewire],
+            description: 'Se trata de un sistema ABM capaz de administrar los pacientes de un consultorio/gimnasio llamado Kinefitness, oriundo de la localidad de General Ramírez.'
+        },
+        {
             src: "mu_play.webp",
             alt: "project mu play",
             titulo: "Mu Play",
