@@ -12,6 +12,7 @@ interface Props {
 
 const { item } = Astro.props;
 const url = `/img/${item.src}`;
+const hasDemo = item.web !== "#";
 ---
 
 <article class="project-item">
@@ -24,13 +25,17 @@ const url = `/img/${item.src}`;
       loading="lazy"
       fetchpriority="low"
     />
-    <ProjectLink
-      text="Demo"
-      url={item.web}
-      ariaLabel={`link to ${item.titulo} project demostration`}
-    >
-      <ComputerIcon slot="icon" stroke="#fff" />
-    </ProjectLink>
+    {
+      hasDemo && (
+        <ProjectLink
+          text="Demo"
+          url={item.web}
+          ariaLabel={`link to ${item.titulo} project demostration`}
+        >
+          <ComputerIcon slot="icon" stroke="#fff" />
+        </ProjectLink>
+      )
+    }
     <ProjectLink
       text="Source Code"
       url={item.git}
@@ -113,7 +118,7 @@ const url = `/img/${item.src}`;
         }
 
         .little-arrow {
-            transform: rotate(180deg);
+          transform: rotate(180deg);
         }
       }
     }
