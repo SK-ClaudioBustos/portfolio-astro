@@ -22,6 +22,15 @@ export const getProjects = () => {
             description: 'Se trata de un sistema ABM capaz de administrar los pacientes de un consultorio/gimnasio llamado Kinefitness, oriundo de la localidad de General Ramírez.'
         },
         {
+            src: "my_car_business.webp",
+            alt: "project my car business",
+            titulo: "My Car Business",
+            git: "https://github.com/SK-ClaudioBustos/mycar-business-front",
+            web: "#",
+            technologies: [TECHNOLOGIES.Typescript , TECHNOLOGIES.React],
+            description: 'Este sistema permite administrar autos y diagnosticar su funcionamiento mediante "Issues", el sistema consta de un frontend hecho con React y un backend hecho con Spring Boot. '
+        },
+        {
             src: "mu_play.webp",
             alt: "project mu play",
             titulo: "Mu Play",
